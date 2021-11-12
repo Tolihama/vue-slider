@@ -34,4 +34,20 @@ const app = new Vue({
         ],
         activeIndex: 0,
     },
+    methods: {
+        prev() {
+            this.activeIndex--;
+
+            if (this.activeIndex < 0) {
+                this.activeIndex = this.slides.length - 1;
+            }
+        },
+        next() {
+            this.activeIndex++;
+
+            if (this.activeIndex > this.slides.length - 1) {
+                this.activeIndex = 0;
+            };
+        },
+    },
 });

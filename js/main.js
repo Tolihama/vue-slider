@@ -35,6 +35,9 @@ const app = new Vue({
         activeIndex: 0,
     },
     methods: {
+        setActive(index) {
+            this.activeIndex = index;
+        },
         prev() {
             this.activeIndex--;
 

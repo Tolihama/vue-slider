@@ -34,6 +34,9 @@ const app = new Vue({
         ],
         activeIndex: 0,
     },
+    created() {
+        setInterval(this.next, 3000);
+    },
     methods: {
         setActive(index) {
             this.activeIndex = index;
